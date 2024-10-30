@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
+    path('api/auth/', include('django_rest_allauth.api.urls')),  # Authentication endpoints
 ]

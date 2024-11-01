@@ -63,6 +63,7 @@ INSTALLED_APPS = [
 
      #user apps
     'core.apps.CoreConfig',
+    'brand.apps.BrandConfig',
 ]
 
 SITE_ID = 1

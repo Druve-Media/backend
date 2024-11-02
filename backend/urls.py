@@ -23,5 +23,7 @@ urlpatterns = [
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('', include('core.urls')),
+    path('brand', include('brand.urls')),
+
     path('api/auth/', include('django_rest_allauth.api.urls')),  # Authentication endpoints
 ]

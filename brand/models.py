@@ -1,7 +1,10 @@
 from django.db import models
 from django.utils import timezone
+from django.conf import settings
 
 class Brand(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='brands')  # Foreign key to User model
+
     logo = models.ImageField(upload_to='brands/logos/', blank=True, null=True)  # Optional logo field
     brand_name = models.CharField(max_length=255)
     owner_full_name = models.CharField(max_length=255)
